@@ -1,0 +1,311 @@
+body {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    ul,
+    li {
+        list-style: none;
+    }
+    #background {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: url(../img/timg.jpg) no-repeat center center;
+        background-size: 100% 100%;
+        opacity: .6;
+        z-index: -1;
+        .box {
+            display: none;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -120%);
+            width: 500px;
+            height: 300px;
+            background: #999;
+            border: 1px solid purple;
+            box-shadow: 0px 0px 7px 7px #ccc;
+            text-align: center;
+            margin: 200px auto;
+            opacity: .9;
+            >h3 {
+                line-height: 50px;
+            }
+            .navbar-left {
+                margin-left: calc((100% - 226px) / 2) !important;
+                #admin {
+                    margin-bottom: 5px;
+                }
+                #password {
+                    margin-bottom: 15px;
+                }
+                #login {
+                    width: 80px;
+                }
+            }
+        }
+    }
+    #menu {
+        position: fixed;
+        left: -100px;
+        width: 123px;
+        margin-top: 20%;
+        z-index: 1;
+        transition: 1s;
+        display: none;
+        ;
+        .menu_active {
+            color: red;
+        }
+        li {
+            width: 100%;
+            font-size: 18px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            margin: 10px 0;
+            color: #ffffff;
+            font-weight: bold;
+            border-radius: 8px;
+            background-color: rgba(214, 80, 31, .5);
+            cursor: pointer;
+            &:hover {
+                color: red;
+            }
+        }
+        &:hover {
+            left: 0;
+        }
+    }
+    .nav {
+        display: none;
+        width: 1200px;
+        margin: 30px auto;
+        background-color: #ffffff;
+        border-radius: 10px;
+        .nav_li_active {
+            display: block;
+        }
+        li {
+            width: 100%;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #000;
+            text-align: center;
+            display: none;
+            input {
+                width: 135px;
+                height: 30px;
+                margin-left: 20px;
+                border-radius: 8px;
+                outline: none;
+                padding-left: 10px;
+                font-size: 16px;
+                border: 1px solid #ccc;
+            }
+            button {
+                width: 50px;
+                height: 30px;
+                border: none;
+                vertical-align: middle;
+                line-height: 30px;
+                border-radius: 8px;
+                font-size: 16px;
+                color: orangered;
+            }
+        }
+        li:nth-of-type(2) {
+            // position: relative;
+            #add_g {
+                position: fixed;
+                width: 800px;
+                height: 700px;
+                left: calc((100% - 800px) / 2);
+                background-color: #ccc;
+                display: none;
+                label {
+                    width: 80px;
+                    text-align: center;
+                }
+                input {
+                    width: 300px;
+                }
+                ._add {
+                    width: 80px;
+                    color: #666;
+                    background-color: rgba(102, 178, 212, 0.5);
+                }
+            }
+        }
+    }
+    #contains_ {
+        width: 1140px;
+        margin: 0 auto;
+        padding: 20px 30px 80px;
+        box-sizing: content-box;
+        border-radius: 10px;
+        display: none;
+        background-color: rgba(102, 178, 212, 0.5);
+        margin-bottom: 80px;
+        .history_active {
+            display: block;
+        }
+        li {
+            width: 100%;
+            border-radius: 10px;
+            display: none;
+        }
+        #userBox {
+            .user-item {
+                width: 100%;
+                height: 70px;
+                display: flex;
+                border: 1px solid #888;
+                border-radius: 10px;
+                justify-content: space-evenly;
+                background-color: #ffffff;
+                margin-bottom: 20px;
+                p {
+                    width: 200px;
+                    height: 100%;
+                    line-height: 70px;
+                    font-size: 18px;
+                    color: #000000;
+                    span {
+                        color: orangered;
+                    }
+                    .del-user {
+                        float: right;
+                        width: 65px;
+                        height: 35px;
+                        line-height: 35px;
+                        border: 1px solid #ccc;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #ffffff;
+                        text-align: center;
+                        background-color: red;
+                        border-radius: 15px;
+                        margin-top: 15px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: red;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+        #goodsBox,
+        #orderBox {
+            .info {
+                width: 100%;
+                height: 60px;
+                background-color: #fff;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                >div {
+                    float: left;
+                    height: 100%;
+                    line-height: 60px;
+                    text-indent: 20px;
+                    font-size: 22px;
+                    font-weight: bold;
+                    color: blue;
+                }
+                ._1,
+                ._4,
+                ._5,
+                ._6 {
+                    width: 150px;
+                }
+                ._2 {
+                    width: 238px;
+                }
+                ._3 {
+                    width: 300px;
+                }
+            }
+            .goods-item,
+            .history-item {
+                width: 100%;
+                height: 200px;
+                background-color: #fff;
+                border: 1px solid #888;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                >div {
+                    float: left;
+                    height: 100%;
+                }
+                .goods_ID,
+                .goods_Sale,
+                .goods_Left,
+                .goods_Del {
+                    width: 150px;
+                    padding-left: 20px;
+                    line-height: 190px;
+                    font-size: 23px;
+                    color: red;
+                    .g_del {
+                        display: block;
+                        width: 65px;
+                        height: 35px;
+                        line-height: 35px;
+                        border: 1px solid #ccc;
+                        font-size: 15px;
+                        font-weight: bold;
+                        color: #ffffff;
+                        text-align: center;
+                        background-color: red;
+                        border-radius: 15px;
+                        margin-top: 70px;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: red;
+                            text-decoration: none;
+                        }
+                    }
+                }
+                .goods_Pic {
+                    width: 238px;
+                    img {
+                        margin-top: 25px;
+                        width: 150px;
+                        height: 150px;
+                    }
+                }
+                .goods_Name {
+                    width: 300px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .g_name_ {
+                        font-size: 20px;
+                        height: 35px;
+                        line-height: 35px;
+                        font-weight: bold;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        color: #333;
+                        padding-right: 15px;
+                        margin-bottom: 20px;
+                    }
+                    .g_sort_ {
+                        font-size: 16px;
+                        height: 20px;
+                        line-height: 20px;
+                        font-weight: bold;
+                        color: #999;
+                    }
+                }
+            }
+        }
+    }
+}
